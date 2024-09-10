@@ -1,0 +1,48 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+  
+  .hero-content {
+    text-align: left;
+  }
+  
+  .image {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .features-section, .instructors-section, .newsletter-section {
+    margin: 40px 0;
+    text-align: center;
+  }
+  
+  .icon {
+    font-size: 48px;
+    color: #3f51b5;
+  }
+  
+  .feature-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .footer {
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .footer nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3f51b5;
+  }
+  
+  .active {
+    font-weight: bold; /* 可以用來高亮顯示當前頁面 */
+  }
+  
