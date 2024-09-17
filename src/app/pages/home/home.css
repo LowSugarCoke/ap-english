@@ -11,11 +11,11 @@
   text-align: left;
 }
 
-.title{
+.hero-title{
   font-weight: bold;
 }
 
-.description{
+.hero-description{
   color:#7A7C82;
   font-size:larger;
 }
@@ -41,7 +41,7 @@
   font-size: 1.5rem;
 }
 
-.section-title
+.instructors-title
 {
   font-weight: bold;
 }
