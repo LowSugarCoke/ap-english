@@ -139,7 +139,7 @@ export class HomepageComponent implements OnInit {
         if (result.matches) {
           if (result.breakpoints[Breakpoints.XSmall]) {
             this.heroCols = 1;
-            this.heroRowHeight = '400px';
+            this.heroRowHeight = '300px';
             this.heroRowspans = [2, 1];
             this.featureCols = 1;
             this.featureHeight = '250px';
