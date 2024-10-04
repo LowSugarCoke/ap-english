@@ -6,6 +6,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { FooterComponent } from '../../shared/components/footer/footer';
+import { HeaderComponent } from '../../shared/components/header/header';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -19,6 +22,9 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
     MatToolbarModule,
     MatIconModule,
     MatGridListModule,
+    FooterComponent,
+    HeaderComponent,
+    RouterModule,
   ],
 })
 export class HomepageComponent implements OnInit {
