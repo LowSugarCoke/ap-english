@@ -13,7 +13,7 @@
         </div>
       </mat-grid-tile>
       <mat-grid-tile [rowspan]="heroRowspans[1]">
-        <img src="hero.jpeg" alt="Students studying" class="image" />
+        <img src="/hero.jpeg" alt="Students studying" class="hero-image" />
       </mat-grid-tile>
     </mat-grid-list>
   </div>
@@ -42,7 +42,7 @@
         <h2 class="feature-title">Efficient Learning</h2>
         <p>Achieve your goals in the shortest possible time with our focused approach.</p>
       </div>
-      </mat-grid-tile>
+    </mat-grid-tile>
   </mat-grid-list>
 </div>
 
@@ -52,17 +52,14 @@
     <mat-grid-tile>
       <div class="instructors-content">
         <h2 class="instructors-title">Our Expert Instructors</h2>
-        <p>
-            TBD
-        </p>
+        <p>We have a team of expert instructors ready to help you achieve your goals.</p>
+        <button mat-raised-button color="primary" (click)="openInstructorDialog()">View Instructors</button>
       </div>
     </mat-grid-tile>
     <mat-grid-tile>
-      <img src="teacher-male.jpeg" alt="Professional teacher" class="image" />
+      <img src="/teacher-male.jpeg" alt="Professional teacher" class="instructor-image" />
     </mat-grid-tile>
   </mat-grid-list>
-
 </div>
-
 
 <app-footer></app-footer>
