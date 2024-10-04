@@ -1,0 +1,30 @@
+<mat-toolbar color="primary" class="mat-elevation-z4">
+    <mat-icon>school</mat-icon>
+    <span>AP Program</span>
+    <span class="spacer"></span>
+  
+    <!-- Desktop -->
+    <div class="desktop-nav">
+      <a *ngFor="let item of navItems"
+         mat-button
+         [routerLink]="item.route"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="getRouterLinkActiveOptions(item.exact)">
+        {{item.label}}
+      </a>
+    </div>
+  
+    <!-- Mobile -->
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="mobile-menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a *ngFor="let item of navItems"
+         mat-menu-item
+         [routerLink]="item.route"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="getRouterLinkActiveOptions(item.exact)">
+        {{item.label}}
+      </a>
+    </mat-menu>
+  </mat-toolbar>
