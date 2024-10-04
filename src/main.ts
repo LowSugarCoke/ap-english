@@ -10,10 +10,13 @@ import {
 } from '@angular/platform-browser/animations';
 import { importProvidersFrom } from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideRouter } from '@angular/router';
+import { routes } from './app/app.routes';
 
 bootstrapApplication(HomepageComponent, {
   providers: [
     provideAnimations(),
+    provideRouter(routes),
     importProvidersFrom(
       BrowserAnimationsModule,
       MatToolbarModule,
