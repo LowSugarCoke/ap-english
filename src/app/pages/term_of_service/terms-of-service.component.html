@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <h1 class="mb-4">Terms of Service for AP Program</h1>
+    <div *ngFor="let section of termsSections" class="terms-section">
+      <h2>{{ section.title }}</h2>
+      <ng-container *ngIf="isArray(section.content); else paragraphContent">
+        <ul>
+          <li *ngFor="let item of section.content">{{ item }}</li>
+        </ul>
+      </ng-container>
+      <ng-template #paragraphContent>
+        <p>{{ section.content }}</p>
+      </ng-template>
+    </div>
+  </div>
+  

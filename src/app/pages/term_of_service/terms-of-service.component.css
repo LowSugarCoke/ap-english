@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    justify-content: flex-start; 
+    flex-direction: column;
+    align-items: flex-start; 
+    margin: 5% 10%;
+}
+
+.terms-section {
+    text-align: left; 
+    margin-bottom: 20px; 
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        margin: 5% 5%; 
+    }
+
+    .terms-section h2 {
+        font-size: 1.5em; 
+    }
+
+    .terms-section p, .terms-section li {
+        font-size: 1em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 5% 2%; 
+    }
+
+    .terms-section h2 {
+        font-size: 1.2em; 
+    }
+
+    .terms-section p, .terms-section li {
+        font-size: 0.9em; 
+    }
+}
