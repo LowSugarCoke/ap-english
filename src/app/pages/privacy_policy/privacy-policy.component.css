@@ -30,6 +30,10 @@
         margin: 5% 2%; 
     }
 
+    .container h1{
+        font-size: 1.5rem;
+    }
+
     .terms-section h2 {
         font-size: 1.2em; 
     }
