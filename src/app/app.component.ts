@@ -10,5 +10,5 @@ import { HeaderComponent } from './shared/components/header/header.component';
   styles: [],
 })
 export class AppComponent {
-  title = 'ap-english';
+  title = 'AP Program';
 }
