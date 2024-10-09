@@ -1,0 +1,103 @@
+<div class="usaco-page">
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>{{ data.title }}</h1>
+          <p>{{ data.description }}</p>
+        </div>
+      </section>
+  
+      <section class="intro">
+        <div class="container">
+          <div class="intro-content">
+            <div>
+              <h2>{{ data.usacoIntro.title }}</h2>
+              <div class="intro-text">
+                <p *ngFor="let paragraph of data.usacoIntro.description">{{ paragraph }}</p>
+              </div>
+            </div>
+            <img [src]="data.usacoIntro.imageSrc" alt="USACO Competition" class="intro-image">
+          </div>
+        </div>
+      </section>
+  
+      <section class="impact-on-college">
+        <div class="container">
+          <h2>{{ data.impactOnCollege.title }}</h2>
+          <p>{{ data.impactOnCollege.description }}</p>
+          <div class="card-grid">
+            <app-card #card *ngFor="let impact of data.impactOnCollege.impacts" 
+                      [title]="impact.title"
+                      [description]="impact.description">
+            </app-card>
+          </div>
+        </div>
+      </section>
+  
+      <section class="usaco-vs-apcs">
+        <div class="container">
+          <h2>{{ data.usacoVsApcs.title }}</h2>
+          <p>{{ data.usacoVsApcs.description }}</p>
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>USACO</th>
+                  <th>AP Computer Science A</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let row of data.usacoVsApcs.comparisonTable">
+                  <td>{{ row.aspect }}</td>
+                  <td>{{ row.usaco }}</td>
+                  <td>{{ row.apcs }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+  
+      <section class="unique-advantages">
+        <div class="container">
+          <h2>{{ data.uniqueAdvantages.title }}</h2>
+          <div class="card-grid">
+            <app-card #card *ngFor="let advantage of data.uniqueAdvantages.advantages" 
+                      [title]="advantage.title"
+                      [description]="advantage.description">
+            </app-card>
+          </div>
+        </div>
+      </section>
+  
+      <section class="usaco-levels">
+        <div class="container">
+          <h2>{{ data.usacoLevels.title }}</h2>
+          <p>{{ data.usacoLevels.description }}</p>
+          <div class="card-grid">
+            <app-card #card *ngFor="let level of data.usacoLevels.levels" 
+                      [title]="level.title"
+                      [description]="level.description">
+            </app-card>
+          </div>
+        </div>
+      </section>
+  
+      <section class="conclusion">
+        <div class="container">
+
+          
+          <div class="course-structure">
+            <h3>USACO Preparation Course Structure</h3>
+            <div class="card-grid">
+              <div class="card" *ngFor="let course of data.conclusion.courseStructure">
+                <h4>{{ course.level }}</h4>
+                <p>{{ course.hours }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
