@@ -1,0 +1,84 @@
+<div class="apcsa-page">
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>{{ data.title }}</h1>
+          <p>{{ data.description }}</p>
+        </div>
+      </section>
+  
+      <section class="intro">
+        <div class="container">
+          <div class="intro-content">
+            <div>
+              <h2>{{ data.apcsaIntro.title }}</h2>
+              <div class="intro-text">
+                <p *ngFor="let paragraph of data.apcsaIntro.description">{{ paragraph }}</p>
+              </div>
+            </div>
+            <img [src]="data.apcsaIntro.imageSrc" alt="APCSA Course" class="intro-image">
+          </div>
+        </div>
+      </section>
+  
+      <section class="exam-structure">
+        <div class="container">
+          <h2>{{ data.examStructure.title }}</h2>
+          <p>{{ data.examStructure.description }}</p>
+          <div class="card-grid">
+            <app-card #card *ngFor="let section of data.examStructure.sections" 
+                      [title]="section.title"
+                      [description]="section.description">
+            </app-card>
+          </div>
+
+          
+        </div>
+      </section>
+  
+      <section>
+        <div class="container">
+            <h3>Exam Content Breakdown</h3>
+          <table class="content-breakdown">
+            <tr *ngFor="let content of data.examStructure.contentBreakdown">
+              <td>{{ content.topic }}</td>
+              <td>{{ content.percentage }}</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="course-design">
+        <div class="container">
+          <h2>{{ data.courseDesign.title }}</h2>
+          <p>{{ data.courseDesign.description }}</p>
+          <ul>
+            <li *ngFor="let feature of data.courseDesign.features">{{ feature }}</li>
+          </ul>
+        </div>
+        <div class="container">
+            <p>{{ data.learningPaths.description }}</p>
+            <div class="card-grid">
+              <app-card #card *ngFor="let path of data.learningPaths.paths" 
+                        [title]="path.title"
+                        [description]="path.description">
+              </app-card>
+            </div>
+          </div> 
+      </section>
+  
+   
+  
+      <section class="results">
+        <div class="container">
+          <h2>{{ data.results.title }}</h2>
+          <p>{{ data.results.description }}</p>
+          <div class="image-grid">
+            <img *ngFor="let src of data.results.imageSrcs" [src]="src" alt="APCSA Result">
+          </div>
+        </div>
+      </section>
+  
+
+    </main>
+  </div>
