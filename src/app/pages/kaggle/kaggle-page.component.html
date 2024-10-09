@@ -1,0 +1,92 @@
+<div class="kaggle-page">
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>{{ data.title }}</h1>
+          <p>{{ data.description }}</p>
+        </div>
+      </section>
+  
+      <section>
+        <div class="container">
+            <img src="./kaggle_website.png" alt="Kaggle" class="website-image">
+        </div>
+    </section>
+
+      <section class="intro">
+        <div class="container">
+          <div class="intro-content">
+            <div>
+              <h2>{{ data.kaggleIntro.title }}</h2>
+              <div class="intro-text">
+                <p *ngFor="let paragraph of data.kaggleIntro.description">{{ paragraph }}</p>
+              </div>
+            </div>
+            <img [src]="data.kaggleIntro.imageSrc" alt="Kaggle Platform" class="intro-image">
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="why-kaggle">
+        <div class="container">
+          <h2>{{ data.whyKaggle.title }}</h2>
+          <p>{{ data.whyKaggle.description }}</p>
+          <div class="card-grid">
+            <app-card *ngFor="let example of data.whyKaggle.examples" [title]="example.title" [description]="example.description">
+            </app-card>
+          </div>
+        </div>
+      </section>
+  
+      <section class="college-application">
+
+        <div class="container">
+          <h2>{{ data.collegeApplication.title }}</h2>
+          <p>{{ data.collegeApplication.description }}</p>
+          <div class="card-grid">
+            <app-card #card *ngFor="let example of data.collegeApplication.examples" 
+                      [title]="example.title"
+                      [description]="example.description">
+            </app-card>
+          </div>
+        </div>
+      </section>
+
+  
+      <section class="benefits">
+        <div class="container">
+          <h2>{{ data.benefits.title }}</h2>
+          <p>{{ data.benefits.description }}</p>
+          <div class="card-grid">
+            <app-card #card *ngFor="let item of data.benefits.items" 
+                      [title]="item.title"
+                      [description]="item.description">
+            </app-card>
+          </div>
+        </div>
+      </section>
+      
+      <section class="github">
+        <div class="container">
+          <h2>{{ data.githubSection.title }}</h2>
+          <p>{{ data.githubSection.description }}</p>
+          <div class="card-grid">
+            <app-card #card *ngFor="let benefit of data.githubSection.benefits" 
+                      [title]="benefit.title"
+                      [description]="benefit.description">
+            </app-card>
+          </div>
+        </div>
+      </section>
+  
+      <section class="conclusion">
+        <div class="container">
+          <h2>{{ data.conclusion.title }}</h2>
+          <p>{{ data.conclusion.description }}</p>
+          <p class="call-to-action">{{ data.conclusion.callToAction }}</p>
+        </div>
+      </section>
+    </main>
+  </div>
